@@ -4,7 +4,7 @@ Project Description:
 
 This is the first section of the AirBnB clone project towards building a full web application where we will be working on the server sede (backend) of the project using a console application as the interface with the help of CMD module in python.
 
-========================================================================================
+============================================================================
 
 Command interpreter functionalities:
 
@@ -18,7 +18,7 @@ Delete: Delete objects.
 
 Data Storage: Store and persist object data.
 
-How it worksa:
+How it works:
 
 Installation
 
