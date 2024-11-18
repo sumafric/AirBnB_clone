@@ -51,10 +51,7 @@ class BaseModel:
 
     def save(self):
         """Updated the public instance attribute with current time"""
-        from models import storage
         self.updated_at = dt.now()
-        storage.save()
-        return True
 
     def to_dict(self):
         """function to return a dictionary containign all
