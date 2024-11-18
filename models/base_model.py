@@ -31,8 +31,10 @@ class BaseModel:
             storage.new(self)
 
     def __str__(self):
-        """magic method __str__ to print [<class name>] (<self.id>)
-          <self.__dict__>	"""
+        """Return a string representation of the instance
+
+        The format is [<class name>] (<self.id>) <self.__dict__>
+        """
         class_name = self.__class__.__name__
         return f"[{class_name}] ({self.id}) {self.__dict__}"
 
@@ -44,7 +46,9 @@ class BaseModel:
 
     def to_dict(self):
         """function to return a dictionary containign all
-        keys/values of __dict__ of the instance"""
+
+        keys/values of __dict__ of the instance
+        """
         dictf = self.__dict__.copy()
         """identify the class name of the instance"""
         dictf["__class__"] = self.__class__.__name__
