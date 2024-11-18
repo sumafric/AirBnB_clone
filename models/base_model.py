@@ -13,9 +13,11 @@ class BaseModel:
         """ Construct anew instance """
         if kwargs:
             if 'created_at' in kwargs:
-                kwargs['created_at'] = dt.strptime(kwargs['created_at'], datetime_format)
+                kwargs['created_at'] = dt.strptime(kwargs['created_at'],
+                        datetime_format)
             if 'updated_at' in kwargs:
-                kwargs['updated_at'] = dt.strptime(kwargs['updated_at'], datetime_format)
+                kwargs['updated_at'] = dt.strptime(kwargs['updated_at'],
+                        datetime_format)
             kwargs.pop('__class__', None)
             self.__dict__ = kwargs
         else:
