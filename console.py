@@ -194,7 +194,7 @@ class HBNBCommand(cmd.Cmd):
         else:
             print([str(obj) for obj in storage.all().values()])
 
-    def do_update(self, arg, attribute_dict):
+    def do_update(self, arg, attribute_dict=None):
         """ updates an instance"""
         arg = arg.split()
         if len(arg) == 0:
@@ -235,5 +235,5 @@ class HBNBCommand(cmd.Cmd):
             print("** class name missing **")
 
 
-if __name__ == "__main__":
+if __name__ == '__main__':
     HBNBCommand().cmdloop()
