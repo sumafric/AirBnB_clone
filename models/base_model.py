@@ -11,7 +11,18 @@ class BaseModel:
     """actual base Class"""
 
     def __init__(self, *args, **kwargs):
-        """ Construct anew instance """
+        """
+        Construct anew instance of BaseModel
+
+        Args:
+            *args: Unused positional arguments
+            **kwargs: Dictionary representation of an instance.
+
+        If kwargs is not empty:
+            Each key has an attribute name
+            Each value is the value of the corresponding attr name
+            Convert datetime to datetime objects
+        """
         if kwargs:
             if 'created_at' in kwargs:
                 kwargs['created_at'] = dt.strptime(
