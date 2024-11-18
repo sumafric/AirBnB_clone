@@ -29,8 +29,8 @@ class FileStorage:
         for k, v in self.__objects.items():
             objdict[k] = v.to_dict()
 
-            with open(self.__file_path, "w", encoding="utf-8") as jfile:
-                json.dump(objdict, jfile)
+        with open(self.__file_path, "w", encoding="utf-8") as jfile:
+            json.dump(objdict, jfile)
 
     def reload(self):
         """handle reload"""
