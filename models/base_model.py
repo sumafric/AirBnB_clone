@@ -51,7 +51,7 @@ class BaseModel:
 
     def save(self):
         """Updated the public instance attribute with current time"""
-        from models.engine.file_storage import FileStorage
+        from models import FileStorage
         self.updated_at = dt.now()
         storage.save()
 
