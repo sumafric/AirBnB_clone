@@ -51,11 +51,16 @@ class BaseModel:
 
     def save(self):
         """Updated the public instance attribute with current time"""
+<<<<<<< HEAD
         from models.engine.file_storage import FileStorage
+=======
+        from models.engine import storage
+>>>>>>> 7ca914be833c78ccd51f7b16531c9885b7cbef28
         self.updated_at = dt.now()
+        storage.save()
 
     def to_dict(self):
-        """function to return a dictionary containign all
+        """function to return a dictionary containing all
 
         keys/values of __dict__ of the instance
         """
