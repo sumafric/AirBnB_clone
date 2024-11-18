@@ -115,7 +115,7 @@ class HBNBCommand(cmd.Cmd):
                         try:
                             attribute_dict = ast.literal_eval(dictionary_repr)
                             m_v = f'{class_name} {instance_id}', attribute_dict
-                            self.do_update(m_v)
+                            self.do_update(m_v, attribute_dict)
                             return
                         except (ValueError, SyntaxError):
                             pass
