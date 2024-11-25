@@ -2,7 +2,7 @@ section.places {
     text-align: center;
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: flex-start;
 }
 section.places h1 {
     position: relative;
