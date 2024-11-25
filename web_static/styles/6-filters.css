@@ -66,6 +66,7 @@
     z-index: 1;
     padding: 30px 50px 30px 0;
     margin-top: 17px;
+    color: black;
 }
 
 .popover, .popover ul {
