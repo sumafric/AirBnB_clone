@@ -46,6 +46,12 @@ class HBNBCommand(cmd.Cmd):
                 return lambda: self.do_all(class_name)
             elif attr.endswith('.destroy'):
                 return lambda id: self.do_destroy(f"{class_name} {id}")
+            elif attr.endswith('.update'):
+                return lambda id, attr_dict: self.do_update(f"{class_name} {id}", attr_dict)
+            elif attr.endswith('.show'):
+                return lambda id: self.do_show(f"{class_name} {id}")
+            else:
+                raise AttributeError(f"'HBNBCommand' object has no attribute '{attr}'")
         raise AttributeError(f"'HBNBCommand' object has no attribute '{attr}'")
 
     def default(self, line):
@@ -114,7 +120,7 @@ class HBNBCommand(cmd.Cmd):
                         dictionary_repr = update_tokens[1]
                         try:
                             attribute_dict = ast.literal_eval(dictionary_repr)
-                            m_v = f'{class_name} {instance_id}', attribute_dict
+                            m_v = f'{class_name} {instance_id}'
                             self.do_update(m_v, attribute_dict)
                             return
                         except (ValueError, SyntaxError):
